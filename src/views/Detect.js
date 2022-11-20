@@ -84,13 +84,9 @@ import {
             formData.append('file', file)
 
             setLoading(true)
-            let img_details = await fetch('http://184.105.188.241:8080/api/detect', {
-                mode:'no-cors',
+            let img_details = await fetch('/api/detect', {
                 method: 'POST',
-                headers:{
-                  "Access-Control-Allow-Origin" : "*", 
-                  "Access-Control-Allow-Credentials" : true 
-                },
+                mode:'cors',
                 body: formData
             }).then(res => res.json()).then(data => {
 
@@ -234,7 +230,7 @@ import {
                         <LightGallery plugins={[lgZoom]} mode="lg-fade">
                             <img
                                 className="img-responsive"
-                                src={'http://184.105.188.241:8080/api/view_img/' + imagePath}
+                                src={'/api/view_img/' + imagePath}
                                 alt="detect-outcome"
                                 style={{ display: 'block',
                                 height: window.innerHeight * 0.4,

@@ -50,5 +50,6 @@
   "devDependencies": {
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.9"
-  }
+  },
+  "proxy":"http://184.105.188.241:8080"
 }
