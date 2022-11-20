@@ -229,7 +229,7 @@ import {
                         <LightGallery plugins={[lgZoom]} mode="lg-fade">
                             <img
                                 className="img-responsive"
-                                src={'../api/view_img/' + imagePath}
+                                src={'/api/view_img/' + imagePath}
                                 alt="detect-outcome"
                                 style={{ display: 'block',
                                 height: window.innerHeight * 0.4,
